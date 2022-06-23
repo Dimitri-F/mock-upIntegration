@@ -1,0 +1,23 @@
+{
+  "name": "mock-upIntegration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dimitri-F/mock-upIntegration.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dimitri-F/mock-upIntegration/issues"
+  },
+  "homepage": "https://github.com/Dimitri-F/mock-upIntegration#readme",
+  "dependencies": {
+    "sass": "^1.53.0"
+  }
+}
