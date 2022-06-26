@@ -10,7 +10,7 @@
 
 
 header {
-    @include taille-elt(100%, 850px);
+    @include taille-elt(100%, auto);
     position: relative;
     font-family: $font-principal;
     img {
@@ -66,11 +66,40 @@ header {
             background-color: $blanc;
         }
     }
-
 }
 
 main {
-    width: 1366px;
     font-family: $font-principal;
+    section {
+        @include taille-elt(100%, auto);
+        padding: 140px 100px;
+    }
 }
 
+.article-principal {
+    @include taille-elt (916px, auto);
+    margin: auto;
+    padding: 100px 0 70px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+    h1 {
+        font-size: 60px;
+        font-weight: 100;
+        span {
+            font-weight: bold;
+        }
+    }
+    h1 + p {
+        font-weight: bold;
+    }
+    hr {
+        width: 75px;
+        margin: 45px auto 60px;
+        border: 1px solid $noir;
+    }
+}
+
+ .article-principal>* {
+     margin-bottom: 40px;
+ }
