@@ -1,5 +1,12 @@
+
+%txt-logo {
+    text-transform: uppercase;
+    color: $txt-blanc;
+    font-family: $font-logo;
+}
+
 %flex-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
