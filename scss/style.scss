@@ -37,9 +37,13 @@ header {
         top: 58px;
         right: 200px;
         text-transform: uppercase;
-        color: #f5f5f5;
+        color: $txt-blanc;
         font-family: $font-logo;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
+        font-size: 15px;
+        border-top: 3px solid #fff;
+        border-bottom: 3px solid #fff;
+        padding: 2px 0;
     }
 }
 
