@@ -76,7 +76,7 @@ main {
     }
 }
 
-.article-principal {
+.principal {
     @include taille-elt (916px, auto);
     margin: auto;
     padding: 100px 0 70px;
@@ -100,6 +100,20 @@ main {
     }
 }
 
- .article-principal>* {
+ .principal>* {
      margin-bottom: 40px;
+ }
+
+ .secondaire {
+    @include taille-elt(100%, 646px);
+    display: flex;
+    .secondaire__article, .secondaire__img{
+        @include taille-elt(50%, 646px);
+    }
+    .secondaire__article {
+        padding: 140px 100px 70px;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 50px;
+    }
  }
