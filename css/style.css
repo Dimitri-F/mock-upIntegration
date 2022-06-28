@@ -1,10 +1,10 @@
-header .header__menu, header .header__logo {
+.header__menu, .header__logo {
   text-transform: uppercase;
   color: #f5f5f5;
   font-family: "Montserrat", sans-serif;
 }
 
-.secondaire .secondaire__icones, header .header__block {
+.secondaire__icones, .header__block {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,7 +26,8 @@ header img {
   width: 100%;
   height: 100%;
 }
-header .header__logo {
+
+.header__logo {
   width: 170px;
   height: 68px;
   position: absolute;
@@ -41,7 +42,8 @@ header .header__logo {
   letter-spacing: 5px;
   font-size: 25px;
 }
-header .header__menu {
+
+.header__menu {
   width: 50px;
   height: 25px;
   position: absolute;
@@ -52,7 +54,8 @@ header .header__menu {
   border-top: 3px solid #fff;
   border-bottom: 3px solid #fff;
 }
-header .header__txt {
+
+.header__txt {
   position: absolute;
   top: 65%;
   right: 0;
@@ -66,13 +69,14 @@ header .header__txt {
   letter-spacing: 9px;
   font-weight: bold;
 }
-header .header__txt span {
+.header__txt span {
   font-size: 200px;
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 19px;
 }
-header .header__block {
+
+.header__block {
   width: 180px;
   height: 20px;
   position: absolute;
@@ -82,13 +86,14 @@ header .header__block {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-header .header__block .header__block__icones {
+
+.header__block__icones {
   width: 16px;
   height: 16px;
   background-color: #000;
   border-radius: 50%;
 }
-header .header__block .header__block__icones:nth-child(3) {
+.header__block__icones:nth-child(3) {
   background-color: #fff;
 }
 
@@ -98,7 +103,7 @@ main {
 main section {
   width: 100%;
   height: auto;
-  padding: 140px 100px;
+  padding: 110px 100px 140px;
 }
 
 .principal {
@@ -139,34 +144,121 @@ main section {
   background-color: #ffe9e2;
   display: flex;
 }
-.secondaire .secondaire__article, .secondaire .secondaire__img {
+
+.secondaire__article,
+.secondaire__img {
   width: 50%;
-  height: 646px;
+  height: auto;
 }
-.secondaire .secondaire__article {
+
+.secondaire__img > img {
+  width: 100%;
+  height: 100%;
+}
+
+.secondaire__article {
   padding: 140px 100px 70px;
   font-size: 30px;
   line-height: 50px;
 }
-.secondaire .secondaire__article > p {
+.secondaire__article > p {
   font-weight: bold;
 }
-.secondaire .secondaire__article footer {
+.secondaire__article footer {
   margin-top: 70px;
   font-weight: 100;
 }
-.secondaire .secondaire__icones {
+
+.secondaire__icones {
   width: 70px;
   margin-top: 55px;
 }
-.secondaire .secondaire__icones div {
+.secondaire__icones div {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   border: 1px solid #000;
 }
-.secondaire .secondaire__icones div:first-child {
+.secondaire__icones div:first-child {
   background-color: #000;
+}
+
+.blog {
+  padding-bottom: 0;
+}
+.blog h2 {
+  font-size: 60px;
+  font-weight: bold;
+}
+.blog hr {
+  margin: 30px 0 100px;
+  border: 1px solid #000;
+  width: 70px;
+}
+.blog > footer {
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog__content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blog__content__msg {
+  width: 570px;
+  height: 290px;
+  padding: 50px 50px 60px;
+  border: 1px solid #000;
+}
+.blog__content__msg h3 {
+  font-size: 28px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+.blog__content__msg p {
+  margin-bottom: 40px;
+}
+.blog__content__msg footer > p {
+  font-style: oblique;
+}
+
+.blog__content__msg:nth-child(2) {
+  border-left: none;
+  border-bottom: none;
+}
+
+.blog__content__msg:nth-child(3) {
+  border-right: none;
+  border-top: none;
+}
+
+.footer__button {
+  width: 280px;
+  height: 60px;
+  border: 2px solid;
+  background-color: #fff;
+  color: #000;
+  padding: 20px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 4px;
+  letter-spacing: 3px;
+}
+
+.ban__img {
+  width: 100%;
+  height: 660px;
+}
+.ban__img img {
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

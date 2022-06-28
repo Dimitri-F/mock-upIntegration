@@ -16,66 +16,65 @@ header {
 
     img {
         @include taille-elt(100%, 100%);
+    } 
+}
+
+.header__logo {
+    @include taille-elt(170px, 68px);
+    @include position-abs(8%, 0, 0, 18%, -50%, -50%);
+    background-color: $noir;
+    padding: 17px 5px;
+    @extend %txt-logo;
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 25px;
+}
+
+.header__menu {
+    @include taille-elt(50px, 25px);
+    position: absolute;
+    top: 58px;
+    right: 200px;
+    @extend %txt-logo;
+    letter-spacing: 1px;
+    font-size: 15px;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+}
+
+.header__txt {
+    @include position-abs(65%, 0, 0, 68%, -50%, -50%);
+    font-size: 55px;
+    width: 720px;
+    color: $blanc;
+    line-height: 75px;
+    letter-spacing: 9px;
+    font-weight: bold;
+
+    & span {
+        font-size: 200px;
+        font-weight: 100;
+        text-transform: uppercase;
+        letter-spacing: 19px;
+
     }
+}
 
-    .header__logo {
-        @include taille-elt(170px, 68px);
-        @include position-abs(8%, 0, 0, 18%, -50%, -50%);
-        background-color: $noir;        
-        padding: 17px 5px;
-        @extend %txt-logo;
-        text-align: center;
-        letter-spacing: 5px;
-        font-size: 25px;
-    }
 
-    .header__menu {
-        @include taille-elt(50px, 25px);
-        position: absolute;
-        top: 58px;
-        right: 200px;
-        @extend %txt-logo;
-        letter-spacing: 1px;
-        font-size: 15px;
-        border-top: 3px solid #fff;
-        border-bottom: 3px solid #fff;
-    }
 
-    .header__txt {
-        @include position-abs(65%, 0, 0, 68%, -50%, -50%);
-        font-size: 55px;
-        width: 720px;
-        color: $blanc;
-        line-height: 75px;
-        letter-spacing: 9px;
-        font-weight: bold;
+.header__block {
+    @include taille-elt(180px, 20px);
+    @include position-abs(92%, 0, 0, 50%, -50%, -50%);
+    @extend %flex-row;
+}
 
-        & span {
-            font-size: 200px;
-            font-weight: 100;
-            text-transform: uppercase;
-            letter-spacing: 19px;
+.header__block__icones {
+    @include taille-elt (16px, 16px);
+    background-color: $noir;
+    border-radius: 50%;
 
-        }
-    }
-
-    
-
-    .header__block {
-        @include taille-elt(180px ,20px);
-        @include position-abs(92%, 0, 0, 50%, -50%, -50%);
-        @extend %flex-row;
-        .header__block__icones {
-            @include taille-elt (16px, 16px);
-            background-color: $noir;
-            border-radius: 50%;
-
-            &:nth-child(3) {
-                background-color: $blanc;
-            }
-        }
-
-        
+    &:nth-child(3) {
+        background-color: $blanc;
     }
 }
 
@@ -84,7 +83,7 @@ main {
 
     section {
         @include taille-elt(100%, auto);
-        padding: 140px 100px;
+        padding: 110px 100px 140px;
     }
 }
 
@@ -97,7 +96,7 @@ main {
     letter-spacing: 1px;
 
     h1 {
-        font-size: 60px;
+        font-size: $taille-font-titre;
         font-weight: 100;
         span {
             font-weight: bold;
@@ -119,47 +118,137 @@ main {
     }
 }
 
- .principal>* {
-     margin-bottom: 40px;
- }
+.principal>* {
+    margin-bottom: 40px;
+}
 
- .secondaire {
-    @include taille-elt(100%, 646px);
-    background-color: #ffe9e2;
-    display: flex;
+.secondaire {
+@include taille-elt(100%, 646px);
+background-color: #ffe9e2;
+display: flex; 
+}
 
-    .secondaire__article, .secondaire__img{
-        @include taille-elt(50%, 646px);
-    }
+.secondaire__article,
+.secondaire__img {
+    @include taille-elt(50%, auto);
+}
 
-    .secondaire__article {
-        padding: 140px 100px 70px;
-        font-size: 30px;
-        line-height: 50px;
+.secondaire__img>img {
+    @include taille-elt(100%, 100%);
+}
 
-        &>p {
+.secondaire__article {
+    padding: 140px 100px 70px;
+    font-size: 30px;
+    line-height: 50px;
+
+    &>p {
         font-weight: bold;
-        }
-
-        footer {
-            margin-top: 70px;
-            font-weight: 100;
-        }
     }
 
-    .secondaire__icones {
-        @extend %flex-row;
-        width: 70px;
-        margin-top: 55px;
+    footer {
+        margin-top: 70px;
+        font-weight: 100;
+    }
+}
 
-        div {
-            @include taille-elt (10px, 10px);
-            border-radius: 50%;
-            border: 1px solid $noir;
+.secondaire__icones {
+    @extend %flex-row;
+    width: 70px;
+    margin-top: 55px;
 
-            &:first-child {
-                background-color: $noir;
-            }
+    div {
+        @include taille-elt (10px, 10px);
+        border-radius: 50%;
+        border: 1px solid $noir;
+
+        &:first-child {
+            background-color: $noir;
         }
-    } 
+    }
+}
+
+ .blog {
+    padding-bottom: 0;
+
+    h2 {
+        font-size: $taille-font-titre;
+        font-weight: bold;
+    }
+
+    hr {
+        margin: 30px 0 100px;
+        border: 1px solid $noir;
+        width: 70px;
+    }
+
+    &>footer {
+        height: 260px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
  }
+
+ .blog__content {
+     display: flex;
+     flex-wrap: wrap;
+ }
+
+ .blog__content__msg {
+     @include taille-elt (570px, 290px);
+     padding: 50px 50px 60px;
+     border: 1px solid $noir;
+
+     h3 {
+         font-size: 28px;
+         margin-bottom: 50px;
+         text-transform: uppercase;
+     }
+
+     p {
+         margin-bottom: 40px;
+     }
+
+     footer>p {
+         font-style: oblique;
+     }
+ }
+
+ .blog__content__msg:nth-child(2) {
+     border-left: none;
+     border-bottom: none;
+ }
+
+ .blog__content__msg:nth-child(3) {
+     border-right: none;
+     border-top: none;
+ }
+
+ .footer__button {
+    @include taille-elt (280px, 60px);
+    border: 2px solid;
+    background-color: $blanc;
+    color: $noir;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 4px;
+    letter-spacing: 3px;
+ }
+
+
+.ban__img {
+    @include taille-elt (100%, 660px);
+
+    img {
+        @include taille-elt (100%, 100%);
+    }
+}
+
+ 
+ 
