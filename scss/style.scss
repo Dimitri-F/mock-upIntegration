@@ -82,8 +82,13 @@ main {
 
     section {
         @include taille-elt(100%, auto);
-        padding: 110px 100px 140px;
+        padding: 110px 100px 0px;
     }
+
+    ul li {
+        list-style-type: none;
+    }
+
 }
 
 .principal {
@@ -168,12 +173,8 @@ main {
     }
 }
 
-.blog {
-    padding-bottom: 0;
-
-    &>footer {
-        @extend %section-footer;
-    }
+.blog>footer {
+    @extend %section-footer;
 }
 
 .section__h2 {
@@ -235,7 +236,7 @@ main {
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 4px;
-    letter-spacing: 3px;
+    letter-spacing: $ecart-lettre;
 }
 
 
@@ -315,7 +316,62 @@ main {
             @include taille-elt (100%, 100%);
         }
     }
+}
 
+.contact {
+    @extend %flex-row;
+    font-weight: bold;
+    letter-spacing: $ecart-lettre
+}
 
+.contact__bloc {
+    @include taille-elt (250px, 370px);
+
+    h4 {
+        margin-bottom: 50px;
+        text-transform: uppercase;
+    }
+}
+
+.contact__bloc:nth-child(1)>ul>li,
+.contact__bloc:nth-child(2)>ul>li {
+    margin-bottom: 15px;
+}
+
+.contact__bloc:nth-child(3) {
+    line-height: 25px;
+}
+
+.contact__bloc:nth-child(3)>ul>li:first-child {
+    margin-bottom: 30px;
+}
+
+.contact__bloc:nth-child(4) {
+
+    input {
+        width: 300px;
+        margin: 30px 0 20px;
+        padding: 15px 20px;
+        background-color: #eeeff0;
+        border: none;
+    }
+
+    input::placeholder {
+        color: gray;
+        letter-spacing: $ecart-lettre;
+    }
+
+    .footer__button {
+        @include taille-elt (130px, 40px);
+        border: 2px solid;
+        background-color: $blanc;
+        color: $noir;
+        padding: 10px 25px;
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 4px;
+        letter-spacing: $ecart-lettre;
+    }
 
 }
