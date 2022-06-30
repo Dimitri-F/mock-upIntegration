@@ -1,3 +1,4 @@
+//Pour positionner un element en "absolute"
 @mixin position-abs($top, $right, $bottom, $left, $x, $y) {
     position: absolute;
     top: $top;
@@ -7,6 +8,7 @@
     transform: translate($x, $y);  
 }
 
+//Pour déterminer la taille d'un élément
 @mixin taille-elt($width, $height) {
     width: $width;
     height: $height;
