@@ -373,5 +373,32 @@ main {
         border-radius: 4px;
         letter-spacing: $ecart-lettre;
     }
+}
 
+.footer {
+    @include taille-elt (100%, 90px);
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 100px;
+    background-color: #f2f4f5;
+
+    p {
+        margin-top: 10px;
+        letter-spacing: 2px;
+    }
+}
+
+.footer__bloc-icones {
+    @include taille-elt (350px, 25px);
+    @extend %flex-row;
+    margin-top: 35px;
+}
+
+.bloc-icones__img {
+    @include taille-elt (25px, 25px);
+
+    img {
+        @include taille-elt (100%, 100%);
+        opacity: .3;
+    }
 }
